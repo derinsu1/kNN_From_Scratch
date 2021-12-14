@@ -2,7 +2,7 @@
 
 I implemented the k nearest neighbors (kNN) classification algorithm on python. This algorithm is used to predict the classes of new data points using the known data points. We get the coordinates of the new data points and calculate the distances between the new data points and all of the known ones. As the next step, we sort the distances and get ‘k’ number of the closest points. If we were using uniform weights, we would simply count the number of points for each class and the class with the highest number would be our prediction for the new point. However, in this project I used inverse-distance weights, instead of simply counting the points we give weights for each point. These weights are inversely correlated with the distances, so a closer point gets assigned a higher weight.
 
-Additionally, the program compares my kNN algorithm with scikit-learn's algorithm. When the decision boundaries are plotted, we can't see any observable difference between them. You can un-commnet the line 150 to test the program with scikit's algorithm. 
+Additionally, the program compares my kNN algorithm with scikit-learn's algorithm. When the decision boundaries are plotted, we can't see any observable difference between them. You can un-comment the line 164 to test the program with scikit's algorithm. 
 
 # Training Data
 
