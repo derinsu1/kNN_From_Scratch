@@ -2,6 +2,8 @@
 
 I implemented the k nearest neighbors (kNN) classification algorithm on python. This algorithm is used to predict the classes of new data points using the known data points. We get the coordinates of the new data points and calculate the distances between the new data points and all of the known ones. As the next step, we sort the distances and get ‘k’ number of the closest points. If we were using uniform weights, we would simply count the number of points for each class and the class with the highest number would be our prediction for the new point. However, in this project I used inverse-distance weights, instead of simply counting the points we give weights for each point. These weights are inversely correlated with the distances, so a closer point gets assigned a higher weight.
 
+Additionally, the program compares my kNN algorithm with scikit-learn's algorithm. When the decision boundaries are plotted, we can't see any observable difference between them. You can un-commnet the line 150 to test the program with scikit's algorithm. 
+
 # Training Data
 
 <img width="433" alt="plot" src="https://user-images.githubusercontent.com/54302889/145944753-31647782-fd6b-48c2-984c-87df95ea2318.png">
@@ -21,3 +23,5 @@ This algorithm created a problem when the test data and the training data had a 
 <br>
 
 <img width="875" alt="image" src="https://user-images.githubusercontent.com/54302889/145945758-75ccd3f7-95e7-45c2-8a4e-dd1c51cad4aa.png">
+
+When k is 1, we can see that a single or a few points that are outside of their expected region can influence the boundaries a lot. However when k is 25, these outliers have a much less impact on the boundaries. This is because we only take into account the single closest point when k is 1.
